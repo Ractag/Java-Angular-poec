@@ -1,0 +1,10 @@
+<form #onomatopeiaForm="ngForm" (ngSubmit)="createOnomatopeia()">
+  <label for="onomatopeia">Onomatopeia list</label>
+  <input
+    type="text"
+    id="onomatopeia"
+    name="onomatopeia"
+    [(ngModel)]="catchOnomatopeia"
+  />
+  <button type="submit">Submit</button>
+</form>
