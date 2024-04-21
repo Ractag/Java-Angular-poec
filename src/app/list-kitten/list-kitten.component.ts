@@ -8,4 +8,9 @@ import { Kitten } from '../models/kitten.model';
 })
 export class ListKittenComponent {
   kittenList: Array<Kitten> = [];
+
+  catchNewKitten(event: Kitten): void {
+    this.kittenList.push(event);
+    console.log(this.kittenList);
+  }
 }

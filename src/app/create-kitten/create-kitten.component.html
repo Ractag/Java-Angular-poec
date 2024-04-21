@@ -1,22 +1,37 @@
-<form #kittenForm="ngForm">
+<form #kittenForm="ngForm" (ngSubmit)="onSubmit()">
   <fieldset>
     <label for="kitten-name">Kitten name</label>
-    <input id="kitten-name" name="kitten-name" type="text" required />
+    <input
+      id="kitten-name"
+      name="kittenName"
+      type="text"
+      [(ngModel)]="kitten.name"
+    />
   </fieldset>
 
   <fieldset>
     <label for="race">Kitten race</label>
-    <input id="race" name="race" type="text" required />
+    <input id="race" name="kittenRace" type="text" [(ngModel)]="kitten.race" />
   </fieldset>
 
   <fieldset>
     <label for="birth">Birth date</label>
-    <input id="birth" name="birth" type="birth" required />
+    <input
+      id="birth"
+      name="kittenBirthDate"
+      type="birth"
+      [(ngModel)]="kitten.birth"
+    />
   </fieldset>
 
   <fieldset>
-    <label for="pictureUrl">Photo</label>
-    <input id="pictureUrl" name="pictureUrl" type="text" required />
+    <label for="pictureUrl">Picture</label>
+    <input
+      id="pictureUrl"
+      name="kittenPicture"
+      type="text"
+      [(ngModel)]="kitten.pictureUrl"
+    />
   </fieldset>
 
   <button type="submit">Envoyer</button>

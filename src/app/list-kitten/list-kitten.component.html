@@ -1,1 +1,9 @@
-<app-create-kitten />
+<app-create-kitten (emitKitten)="catchNewKitten($event)" />
+<div class="kitten-container">
+  <div *ngFor="let kitten of kittenList">
+    {{ kitten.name }}
+    {{ kitten.race }}
+    {{ kitten.birth }}
+    {{ kitten.pictureUrl }}
+  </div>
+</div>
