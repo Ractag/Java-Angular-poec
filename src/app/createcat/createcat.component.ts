@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Cat } from '../models/cat.model';
 
 @Component({
@@ -9,11 +9,10 @@ import { Cat } from '../models/cat.model';
 export class CreatecatComponent {
   newCat: Cat = new Cat('', '');
 
-  @Input()
-  catList: Array<Cat> = [];
+  @Output()
+  emitCat: EventEmitter<Cat> = new EventEmitter<Cat>();
 
   createCat(): void {
-    this.catList.push(this.newCat);
-    console.log(this.catList);
+    this.emitCat.emit(this.newCat);
   }
 }

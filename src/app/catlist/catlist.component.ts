@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Cat } from '../models/cat.model';
 
 @Component({
@@ -8,4 +8,8 @@ import { Cat } from '../models/cat.model';
 })
 export class CatlistComponent {
   catList: Array<Cat> = [];
+
+  onCatAdded(event: Cat): void {
+    this.catList.push(event);
+  }
 }
