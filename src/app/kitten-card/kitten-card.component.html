@@ -1,6 +1,7 @@
 <div>
   <h3>{{ kittenChild.name }}</h3>
-  <img [src]="kittenChild.pictureUrl" alt="Chat" />
+  <img [src]="kittenChild.pictureUrl" alt="Chat" [width]="200" />
   <p>{{ kittenChild.race }}</p>
   <p>{{ kittenChild.birth }}</p>
+  <button (click)="adopt(kittenId)">Adopter</button>
 </div>

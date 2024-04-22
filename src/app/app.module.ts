@@ -8,6 +8,7 @@ import { ListKittenComponent } from './list-kitten/list-kitten.component';
 import { UserKittenComponent } from './user-kitten/user-kitten.component';
 import { FormsModule } from '@angular/forms';
 import { KittenCardComponent } from './kitten-card/kitten-card.component';
+import { AdoptedKittenComponent } from './adopted-kitten/adopted-kitten.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { KittenCardComponent } from './kitten-card/kitten-card.component';
     ListKittenComponent,
     UserKittenComponent,
     KittenCardComponent,
+    AdoptedKittenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

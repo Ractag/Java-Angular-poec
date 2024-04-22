@@ -4,12 +4,8 @@
     <app-kitten-card
       *ngFor="let kitten of kittenList; let i = index"
       [kittenChild]="kitten"
-      (emitKitten)="spliceNewKittent($event, i)"
-    >
-      {{ kitten.name }}
-      {{ kitten.race }}
-      {{ kitten.birth }}
-      {{ kitten.pictureUrl }}
-    </app-kitten-card>
+      [id]="i"
+      [kittenFromParent]="kittenList"
+    />
   </div>
 </div>

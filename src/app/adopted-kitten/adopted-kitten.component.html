@@ -1,0 +1,9 @@
+<p>
+  chatons adoptés
+  @for (kitten of kittenList; track $index) {
+    <p>{{ kitten.name }}</p>
+    <p>{{ kitten.race }}</p>
+    <p>{{ kitten.birth }}</p>
+    <img [src]="kitten.pictureUrl" alt="Chat" [width]="200" />
+  }
+</p>
