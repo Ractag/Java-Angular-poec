@@ -1,0 +1,9 @@
+<form #catForm="ngForm" (ngSubmit)="createCat()">
+  <fieldset>
+    <div>Cat name:</div>
+    <input name="catName" type="text" [(ngModel)]="newCat.name" />
+    <div>Cat picture:</div>
+    <input name="catPicture" type="text" [(ngModel)]="newCat.pictureUrl" />
+    <button type="submit">Envoyer</button>
+  </fieldset>
+</form>
