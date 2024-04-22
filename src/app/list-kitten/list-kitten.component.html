@@ -1,9 +1,15 @@
 <app-create-kitten (emitKitten)="catchNewKitten($event)" />
 <div class="kitten-container">
-  <div *ngFor="let kitten of kittenList">
-    {{ kitten.name }}
-    {{ kitten.race }}
-    {{ kitten.birth }}
-    {{ kitten.pictureUrl }}
+  <div>
+    <app-kitten-card
+      *ngFor="let kitten of kittenList; let i = index"
+      [kittenChild]="kitten"
+      (emitKitten)="spliceNewKittent($event, i)"
+    >
+      {{ kitten.name }}
+      {{ kitten.race }}
+      {{ kitten.birth }}
+      {{ kitten.pictureUrl }}
+    </app-kitten-card>
   </div>
 </div>

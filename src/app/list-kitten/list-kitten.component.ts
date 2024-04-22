@@ -13,4 +13,8 @@ export class ListKittenComponent {
     this.kittenList.push(event);
     console.log(this.kittenList);
   }
+  spliceNewKittent(event: Kitten, index: number) {
+    this.kittenList.splice(index, 1);
+    console.log(this.kittenList);
+  }
 }
