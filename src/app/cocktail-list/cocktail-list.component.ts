@@ -10,7 +10,15 @@ import { Cocktail } from '../models/cocktail.model';
 export class CocktailListComponent implements OnInit {
   cocktails = inject(CocktailService);
 
+  cocktailsList = [];
+
   ngOnInit(): any {
-    console.log(this.cocktails.getCocktails());
+    console.log(
+      this.cocktails
+        .getCocktails()
+        .subscribe(
+          (cocktailsFromJSON) => (this.cocktailsList = cocktailsFromJSON),
+        ),
+    );
   }
 }
