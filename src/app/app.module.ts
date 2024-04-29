@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 
 @NgModule({
-  declarations: [AppComponent, CocktailListComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, PokemonCardComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
