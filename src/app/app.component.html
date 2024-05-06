@@ -1,1 +1,9 @@
-<app-onomatopeia-list />
+<app-create-onomatopeia
+  (newOnomatopeia)="catchNewOnomatopeia($event)"
+>
+</app-create-onomatopeia>
+<ul>
+  <li *ngFor="let onomatopeia of onomatopeiaList">
+    {{onomatopeia.name}}
+  </li>
+</ul>

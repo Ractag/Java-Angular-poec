@@ -1,3 +1,3 @@
 export type Onomatopeia = {
-  name: '';
-};
+  name: string;
+}

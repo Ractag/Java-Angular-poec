@@ -1,19 +1,20 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Onomatopeia } from '../models/onomatopeia.model';
-import { OnomatopeiaListComponent } from '../onomatopeia-list/onomatopeia-list.component';
+import { Onomatopeia } from '../models/Onomatopeia.model';
+import { Value } from 'sass';
 
 @Component({
   selector: 'app-create-onomatopeia',
   templateUrl: './create-onomatopeia.component.html',
-  styleUrl: './create-onomatopeia.component.css',
+  styleUrl: './create-onomatopeia.component.css'
 })
+
 export class CreateOnomatopeiaComponent {
-  catchOnomatopeia!: Onomatopeia;
 
-  @Output()
-  onomatopeia: EventEmitter<Onomatopeia> = new EventEmitter();
+@Output() newOnomatopeia: EventEmitter<Onomatopeia> = new EventEmitter<Onomatopeia>();
 
-  createOnomatopeia(): void {
-    this.onomatopeia.emit(this.catchOnomatopeia);
-  }
+createOnomatopeia() {
+   this.newOnomatopeia.emit(this.newOnomatopeia)
+   console.log("createOnomatopeia method is called")
+}
+
 }
