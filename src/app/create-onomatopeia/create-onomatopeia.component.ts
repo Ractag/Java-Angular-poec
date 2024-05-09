@@ -9,10 +9,11 @@ import { Onomatopeia } from '../models/Onomatopeia.model';
 
 export class CreateOnomatopeiaComponent {
 
-@Output() newOnomatopeia: EventEmitter<Onomatopeia> = new EventEmitter<Onomatopeia>();
+@Output() newOnomatopeia: EventEmitter<string> = new EventEmitter<string>();
 
-createOnomatopeia() {
-   this.newOnomatopeia.emit(this.newOnomatopeia)
+createOnomatopeia(name: string) {
+   this.newOnomatopeia.emit(name)
+   console.log(name)
 }
 
 }

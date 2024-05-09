@@ -18,9 +18,9 @@ export class AppComponent {
   // Configurer le parent avec une méthode pour recevoir les données + les afficher
   // Configurer html parent pour display la data
 
-  onomatopeiaList: Onomatopeia[] = [];
+  onomatopeiaList: string[] = [];
 
-  catchNewOnomatopeia(event: Onomatopeia) {
+  catchNewOnomatopeia(event: string) {
     this.onomatopeiaList.push(event)
   }
 
