@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Onomatopeia } from '../models/Onomatopeia.model';
-import { Value } from 'sass';
 
 @Component({
   selector: 'app-create-onomatopeia',
@@ -14,7 +13,6 @@ export class CreateOnomatopeiaComponent {
 
 createOnomatopeia() {
    this.newOnomatopeia.emit(this.newOnomatopeia)
-   console.log("createOnomatopeia method is called")
 }
 
 }

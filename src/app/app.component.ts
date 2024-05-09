@@ -22,7 +22,6 @@ export class AppComponent {
 
   catchNewOnomatopeia(event: Onomatopeia) {
     this.onomatopeiaList.push(event)
-    console.log("new onomatopeia:", event)
   }
 
 }
